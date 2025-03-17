@@ -2,7 +2,7 @@
 
 Exercices de Maths par Nicole Joligeon.
 
-Github Page: http://localhost:8080/
+Github Page: https://jimj92120.github.io/exos-nicole/
 
 ---
 
@@ -40,6 +40,8 @@ yarn
 ```sh
 yarn start
 ```
+
+Project will run at `http://localhost:8080/`.
 
 ### build
 
