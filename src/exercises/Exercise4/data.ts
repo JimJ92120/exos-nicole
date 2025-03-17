@@ -1,42 +1,47 @@
-import { Excercice, Section } from "./type";
+import { ExerciseData } from "../type";
 
-class Excercice4 extends Excercice {
-  title: string = "Exercice 4";
-  className: string = "exercise-4";
-
-  constructor() {
-    super();
-  }
-
-  get template(): string {
-    const sectionsHtml: string = this.sections.reduce(
-      (_result, section) =>
-        _result +
-        `
-<section>
-  <h4>${section.title}</h4>
-  <div>${section.content}
-</section>
-`,
-      ""
-    );
-
+const EXERCISE_4: ExerciseData = {
+  title: "Exercise 4",
+  className: "exercise-4",
+  inlineStyle: (): string => {
     return `
-<div class="${this.className}">
-  <h3>${this.title}</h3>    
+  <style>
+    .${EXERCISE_4.className} {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+    }
+
+    .${EXERCISE_4.className} h3 {
+      min-width: 100%;
+    }
+
+    section {
+      text-align: left;
+      width: 50%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
   
-  ${sectionsHtml}
-</div>
-${this.inlineStyle}
-
-`;
-  }
-
-  private get sections(): Section[] {
-    return [
-      {
-        title: "1ère fonction",
-        content: `
+    table,
+    td,
+    th {
+      border: 1px solid black;
+    }
+  
+    mtable > mtr > mtd:first-child {
+      border-right: 1px solid black;
+    }
+    mtable > mtr:first-child > mtd {
+      border-bottom: 1px solid black;
+    }
+  </style>  
+  `;
+  },
+  sections: [
+    {
+      title: "1ère fonction",
+      content: `
 <div>
   <p>
     Étudier les variations de
@@ -69,9 +74,9 @@ ${this.inlineStyle}
     </math>
     donc:
   </p>
-</div>
+  </div>
 
-<div>
+  <div>
   <!--  | x | -∞ | 3/2 |  +∞ |
         |---|----|-----|-----|
         | f'|       0
@@ -119,212 +124,246 @@ ${this.inlineStyle}
     </mtable>
   </math>
 </div>
-          `,
-      },
-      {
-        title: "2ème fonction",
-        content: `
+      `,
+    },
+    {
+      title: "2ème fonction",
+      content: `
 <div>
-  <p>
-    Étudier les variations de
-    <math>
+<p>
+  Étudier les variations de
+  <math>
+    <mi>f</mi>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+    <mo>=</mo>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>-</mo>
+    <mn>3</mn>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mn>2</mn>
+  </math>
+  sur <b>R</b>.
+</p>
+<p>
+  <math>
+    <msub>
       <mi>f</mi>
-      <mo>(</mo>
-      <mi>x</mi>
-      <mo>)</mo>
-      <mo>=</mo>
-      <msup>
-        <mi>x</mi>
+      <mn>1</mn>
+    </msub>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+    <mo>=</mo>
+    <mn>2</mn>
+    <mi>x</mi>
+    <mo>-</mo>
+    <mn>3</mn>
+  </math>
+  et
+  <math>
+    <mn>2</mn>
+    <mi>x</mi>
+    <mo>-</mo>
+    <mn>3</mn>
+    <mo>></mo>
+    <mn>0</mn>
+  </math>
+  si
+  <math>
+    <mi>x</mi>
+    <mo>></mo>
+    <mfrac>
+      <mrow>
+        <mn>3</mn>
+      </mrow>
+      <mrow>
         <mn>2</mn>
-      </msup>
-      <mo>-</mo>
-      <mn>3</mn>
-      <mi>x</mi>
-      <mo>+</mo>
-      <mn>2</mn>
-    </math>
-    sur <b>R</b>.
-  </p>
-  <p>
-    <math>
-      <msub>
-        <mi>f</mi>
-        <mn>1</mn>
-      </msub>
-      <mo>(</mo>
-      <mi>x</mi>
-      <mo>)</mo>
-      <mo>=</mo>
-      <mn>2</mn>
-      <mi>x</mi>
-      <mo>-</mo>
-      <mn>3</mn>
-    </math>
-    et
-    <math>
-      <mn>2</mn>
-      <mi>x</mi>
-      <mo>-</mo>
-      <mn>3</mn>
-      <mo>></mo>
-      <mn>0</mn>
-    </math>
-    si
-    <math>
-      <mi>x</mi>
-      <mo>></mo>
-      <mfrac>
-        <mrow>
-          <mn>3</mn>
-        </mrow>
-        <mrow>
-          <mn>2</mn>
-        </mrow>
-      </mfrac>
-    </math>
-    donc:
-  </p>
+      </mrow>
+    </mfrac>
+  </math>
+  donc:
+</p>
 </div>
 
 <div>
-  <!--  | x | -∞ | 3/2 |  +∞ |
-        |---|----|-----|-----|
-        | f'|    -  0     +  |
-        | f |    \\       /  |
-  -->
-  <math>
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>
-            <mi>x</mi>
-          </mi>
-        </mtd>
-        <mtd>
-          <mo>-</mo>
-          <mi>∞</mi>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mfrac>
-            <mrow>
-              <mn>2</mn>
-            </mrow>
-            <mrow>
-              <mn>3</mn>
-            </mrow>
-          </mfrac>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>+</mo>
-          <mi>∞</mi>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>f</mi>
-            <mn>1</mn>
-          </msub>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>-</mo>
-        </mtd>
-        <mtd>
-          <mi>0</mi>
-        </mtd>
-        <mtd>
-          <mo>+</mo>
-        </mtd>
-        <mtd></mtd>
-      </mtr>
-      <mtr>
-        <mtd>
+<!--  | x | -∞ | 3/2 |  +∞ |
+      |---|----|-----|-----|
+      | f'|    -  0     +  |
+      | f |    \\       /  |
+-->
+<math>
+  <mtable>
+    <mtr>
+      <mtd>
+        <mi>
+          <mi>x</mi>
+        </mi>
+      </mtd>
+      <mtd>
+        <mo>-</mo>
+        <mi>∞</mi>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mfrac>
+          <mrow>
+            <mn>2</mn>
+          </mrow>
+          <mrow>
+            <mn>3</mn>
+          </mrow>
+        </mfrac>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>+</mo>
+        <mi>∞</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
           <mi>f</mi>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>\\</mo>
-        </mtd>
-        <mtd></mtd>
-        <mtd>/</mtd>
-        <mtd></mtd>
-      </mtr>
-    </mtable>
-  </math>
+          <mn>1</mn>
+        </msub>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>-</mo>
+      </mtd>
+      <mtd>
+        <mi>0</mi>
+      </mtd>
+      <mtd>
+        <mo>+</mo>
+      </mtd>
+      <mtd></mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi>f</mi>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>\\</mo>
+      </mtd>
+      <mtd></mtd>
+      <mtd>/</mtd>
+      <mtd></mtd>
+    </mtr>
+  </mtable>
+</math>
 </div>  
 `,
-      },
-      {
-        title: "3ème fonction",
-        content: `
+    },
+    {
+      title: "3ème fonction",
+      content: `
 <div>
-  <p>
-    Étudier les variations de
-    <math>
+<p>
+  Étudier les variations de
+  <math>
+    <mi>f</mi>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+    <mo>=</mo>
+    <msup>
+      <mi>x</mi>
+      <mn>3</mn>
+    </msup>
+    <mo>-</mo>
+    <mn>3</mn>
+    <msup>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msup>
+    <mo>+</mo>
+    <mn>2</mn>
+    <mi>x</mi>
+    <mo>-</mo>
+    <mn>3</mn>
+  </math>
+  sur <b>R</b>.
+</p>
+<p>
+  <math>
+    <msub>
       <mi>f</mi>
-      <mo>(</mo>
+      <mn>1</mn>
+    </msub>
+    <mo>(</mo>
+    <mi>x</mi>
+    <mo>)</mo>
+    <mo>=</mo>
+    <mn>3</mn>
+    <msup>
       <mi>x</mi>
-      <mo>)</mo>
-      <mo>=</mo>
-      <msup>
-        <mi>x</mi>
-        <mn>3</mn>
-      </msup>
-      <mo>-</mo>
-      <mn>3</mn>
-      <msup>
-        <mi>x</mi>
-        <mn>2</mn>
-      </msup>
-      <mo>+</mo>
       <mn>2</mn>
+    </msup>
+    <mo>-</mo>
+    <mn>6</mn>
+    <mi>x</mi>
+    <mo>+</mo>
+    <mn>2</mn>
+  </math>
+  et
+  <math>
+    <mi>Δ</mi>
+    <mo>=</mo>
+    <mn>36</mn>
+    <mo>-</mo>
+    <mn>24</mn>
+    <mo>=</mo>
+    <mn>12</mn>
+  </math>
+</p>
+<p>Il y a 2 racines:
+  <math>
+    <msub>
       <mi>x</mi>
-      <mo>-</mo>
-      <mn>3</mn>
-    </math>
-    sur <b>R</b>.
-  </p>
-  <p>
-    <math>
-      <msub>
-        <mi>f</mi>
-        <mn>1</mn>
-      </msub>
-      <mo>(</mo>
+      <mn>1</mn>
+    </msub>
+</math>
+et
+<math>
+  <msub>
+    <mi>x</mi>
+    <mn>2</mn>
+  </msub>
+</math>
+.
+</p>
+<p>
+  <math>
+    <msub>
       <mi>x</mi>
-      <mo>)</mo>
-      <mo>=</mo>
-      <mn>3</mn>
-      <msup>
-        <mi>x</mi>
+      <mi>1</mi>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mo>(</mo>
+        <mn>6</mn>
+        <mo>+</mo>
         <mn>2</mn>
-      </msup>
-      <mo>-</mo>
-      <mn>6</mn>
-      <mi>x</mi>
-      <mo>+</mo>
-      <mn>2</mn>
-    </math>
-    et
-    <math>
-      <mi>Δ</mi>
-      <mo>=</mo>
-      <mn>36</mn>
-      <mo>-</mo>
-      <mn>24</mn>
-      <mo>=</mo>
-      <mn>12</mn>
-    </math>
-  </p>
-  <p>Il y a 2 racines:
-    <math>
-      <msub>
-        <mi>x</mi>
-        <mn>1</mn>
-      </msub>
+        <msqrt>
+          <mn>3</mn>
+        </msqrt>
+        <mo>)</mo>
+      </mrow>
+      <mrow>
+        <mn>6</mn>
+      </mrow>
+    </mfrac>
+    <mo>≈</mo>
+    <mn>1.6</mn>
   </math>
   et
   <math>
@@ -332,141 +371,107 @@ ${this.inlineStyle}
       <mi>x</mi>
       <mn>2</mn>
     </msub>
-  </math>
-  .
-  </p>
-  <p>
-    <math>
-      <msub>
-        <mi>x</mi>
-        <mi>1</mi>
-      </msub>
-      <mo>=</mo>
-      <mfrac>
-        <mrow>
-          <mo>(</mo>
-          <mn>6</mn>
-          <mo>+</mo>
-          <mn>2</mn>
-          <msqrt>
-            <mn>3</mn>
-          </msqrt>
-          <mo>)</mo>
-        </mrow>
-        <mrow>
-          <mn>6</mn>
-        </mrow>
-      </mfrac>
-      <mo>≈</mo>
-      <mn>1.6</mn>
-    </math>
-    et
-    <math>
-      <msub>
-        <mi>x</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <mo>(</mo>
+        <mn>6</mn>
+        <mo>-</mo>
         <mn>2</mn>
-      </msub>
-      <mo>=</mo>
-      <mfrac>
-        <mrow>
-          <mo>(</mo>
-          <mn>6</mn>
-          <mo>-</mo>
-          <mn>2</mn>
-          <msqrt>
-            <mn>3</mn>
-          </msqrt>
-          <mo>)</mo>
-        </mrow>
-        <mrow>
-          <mn>6</mn>
-        </mrow>
-      </mfrac>
-      <mo>≈</mo>
-      <mn>0.4</mn>
-    </math>
-  </p>
-
-  <!--  | x | -∞ | x2  | x1  |  +∞ |
-        |---|----|-----|-----|-----|
-        | f'|    +  0  -  0  +     |
-        | f |    /     \\    /     |
-  -->
-  <math>
-    <mtable>
-      <mtr>
-        <mtd>
-          <mi>x</mi>
-        </mtd>
-        <mtd>
-          <mo>-</mo>
-          <mn>∞</mn>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>x</mo>
-          <mn>2</mn>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>x</mo>
+        <msqrt>
           <mn>3</mn>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>+</mo>
-          <mn>∞</mn>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <msub>
-            <mi>f</mi>
-            <mn>1</mn>
-          </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>+</mo>
-        </mtd>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-        <mtd>
-          <mo>-</mo>
-        </mtd>
-        <mtd>
-          <mn>0</mn>
-        </mtd>
-        <mtd>
-          <mo>+</mo>
-        </mtd>
-      </mtr>
-      <mtr>
-        <mtd>
-          <mi>f</mi>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>/</mo>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mo>\\</mo>
-        </mtd>
-        <mtd></mtd>
-        <mtd>
-          <mi>/</mi>
-        </mtd>
-      </mtr>
-    </mtable>
+        </msqrt>
+        <mo>)</mo>
+      </mrow>
+      <mrow>
+        <mn>6</mn>
+      </mrow>
+    </mfrac>
+    <mo>≈</mo>
+    <mn>0.4</mn>
   </math>
+</p>
+
+<!--  | x | -∞ | x2  | x1  |  +∞ |
+      |---|----|-----|-----|-----|
+      | f'|    +  0  -  0  +     |
+      | f |    /     \\    /     |
+-->
+<math>
+  <mtable>
+    <mtr>
+      <mtd>
+        <mi>x</mi>
+      </mtd>
+      <mtd>
+        <mo>-</mo>
+        <mn>∞</mn>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>x</mo>
+        <mn>2</mn>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>x</mo>
+        <mn>3</mn>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>+</mo>
+        <mn>∞</mn>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>f</mi>
+          <mn>1</mn>
+        </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>+</mo>
+      </mtd>
+      <mtd>
+        <mn>0</mn>
+      </mtd>
+      <mtd>
+        <mo>-</mo>
+      </mtd>
+      <mtd>
+        <mn>0</mn>
+      </mtd>
+      <mtd>
+        <mo>+</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <mi>f</mi>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>/</mo>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mo>\\</mo>
+      </mtd>
+      <mtd></mtd>
+      <mtd>
+        <mi>/</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>
 
 </div>        
-`,
-      },
-      {
-        title: "4e fonction",
-        content: `
+      `,
+    },
+    {
+      title: "4e fonction",
+      content: `
 <div>
   <p>
     Étudier les variations de
@@ -592,9 +597,9 @@ ${this.inlineStyle}
       <mn>0</mn>
     </math>
   </p>
-</div>
+  </div>
 
-<div>
+  <div>
   <!--  | x | -∞ | 5/2 |  +∞ |
         |---|----|-----|-----|
         | f'|  +          +  |
@@ -661,11 +666,11 @@ ${this.inlineStyle}
     </mtable>
   </math>
 </div>
-`,
-      },
-      {
-        title: "5ème fonction",
-        content: `
+        `,
+    },
+    {
+      title: "5ème fonction",
+      content: `
 <div>
   <p>
     Étudier les variations de
@@ -838,9 +843,9 @@ ${this.inlineStyle}
       <mn>3.3</mn>
     </math>
   </p>
-</div>
+  </div>
 
-<div>
+  <div>
   <!--  | x |  0 | 1/2 |  +∞ |
         |---|----|-----|-----|
         | g'|  -    0     +  |
@@ -908,10 +913,10 @@ ${this.inlineStyle}
       </mtr>
     </mtable>
   </math>
-</div>
-<br />
+  </div>
+  <br />
 
-<div>
+  <div>
   <!--  | x |  0 | +∞ |
         |---|----|----|
         | f'|    +    |
@@ -958,49 +963,9 @@ ${this.inlineStyle}
     </mtable>
   </math>
 </div>     
-        
-`,
-      },
-    ];
-  }
+      `,
+    },
+  ],
+};
 
-  private get inlineStyle(): string {
-    return `
-  <style>
-    .${this.className} {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
-    }
-
-    .${this.className} h3 {
-      min-width: 100%;
-    }
-
-    section {
-      text-align: left;
-      width: 50%;
-      padding: 1rem;
-      box-sizing: border-box;
-    }
-  
-    table,
-    td,
-    th {
-      border: 1px solid black;
-    }
-  
-    mtable > mtr > mtd:first-child {
-      border-right: 1px solid black;
-    }
-    mtable > mtr:first-child > mtd {
-      border-bottom: 1px solid black;
-    }
-  </style>  
-  `;
-  }
-}
-
-export { Excercice4 };
-
-customElements.define("exercice-4", Excercice4);
+export { EXERCISE_4 };
