@@ -1,6 +1,6 @@
 # exos-nicole
 
-Exercices de Maths par Nicole Joligeon.
+Exercises de Maths par Nicole Joligeon.
 
 Github Page: https://jimj92120.github.io/exos-nicole/
 
