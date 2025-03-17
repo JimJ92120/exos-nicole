@@ -37,62 +37,153 @@ ${this.inlineStyle}
       {
         title: "1ère fonction",
         content: `
-  <div>
-    <p>Étudier les variations de <math>
-      <mi>f</mi>(<mi>x</mi>) = 5<mi>x</mi> + 1
-    </math> sur <b>R</b></p>
-    <p><math>
-      <mi>f</mi><mn>'</mn>(<mi>x</mi>) = 5 > 0
-    </math> donc:</p>
-  </div>
-
-  <div>
-    <!--  | x | -∞ | 3/2 |  +∞ |
-          |---|----|-----|-----|
-          | f'|       0
-          | f |       /
-    -->
+<div>
+  <p>
+    Étudier les variations de
     <math>
-      <mtable frame="solid">
-        <mtr>
-          <mtd><mi>
-            <math><mi>x</mi></math>
-          </mi></mtd>
-          <mtd><mi>-∞</mi></mtd>
-          <mtd><mi></mi></mtd>
-          <mtd><mi>+∞</mi></mtd>
-        </mtr>
-        <mtr>
-          <mtd><mi>f</mi><mn>'</mn></mtd>
-          <mtd><mi></mi></mtd>
-          <mtd><mi>0</mi></mtd>
-          <mtd><mi></mi></mtd>
-        </mtr>
-        <mtr>
-          <mtd><mi>f</mi></mtd>
-          <mtd><mi></mi></mtd>
-          <mtd><mi>/</mi></mtd>
-          <mtd><mi></mi></mtd>
-        </mtr>
-      </mtable>
+      <mi>f</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
+      <mn>5</mn>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mn>1</mn>
     </math>
-  </div>
+    sur <b>R</b>
+  </p>
+  <p>
+    <math>
+      <msub>
+        <mi>f</mi>
+        <mi>1</mi>
+      </msub>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
+      <mn>5</mn>
+      <mo>></mo>
+      <mn>0</mn>
+    </math>
+    donc:
+  </p>
+</div>
+
+<div>
+  <!--  | x | -∞ | 3/2 |  +∞ |
+        |---|----|-----|-----|
+        | f'|       0
+        | f |       /
+  -->
+  <math>
+    <mtable>
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mo>-</mo>
+          <mi>∞</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+          <mi>∞</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mi>1</mi>
+          </msub>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd></mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>f</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>/</mo>
+        </mtd>
+        <mtd></mtd>
+      </mtr>
+    </mtable>
+  </math>
+</div>
           `,
       },
       {
         title: "2ème fonction",
         content: `
 <div>
-  <p>Étudier les variations de <math>
-    <mi>f</mi>(<mi>x</mi>) = <msup><mi>x</mi><mn>2</mn></msup> - 3<mi>x</mi> +2
-  </math> sur <b>R</b>.</p>
   <p>
-    <math><mi>f</mi><mn>'</mn>(<mi>x</mi>) = 2<mi>x</mi> - 3
-    </math> et <math>
-      2<mi>x</mi> - 3 > 0
-    </math> si <math>
-      <mi>x</mi> <mfrac><mrow>3</mrow><mrow>2</mrow></mfrac>
-    </math>  donc:</p>
+    Étudier les variations de
+    <math>
+      <mi>f</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>-</mo>
+      <mn>3</mn>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+    </math>
+    sur <b>R</b>.
+  </p>
+  <p>
+    <math>
+      <msub>
+        <mi>f</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
+      <mn>2</mn>
+      <mi>x</mi>
+      <mo>-</mo>
+      <mn>3</mn>
+    </math>
+    et
+    <math>
+      <mn>2</mn>
+      <mi>x</mi>
+      <mo>-</mo>
+      <mn>3</mn>
+      <mo>></mo>
+      <mn>0</mn>
+    </math>
+    si
+    <math>
+      <mi>x</mi>
+      <mo>></mo>
+      <mfrac>
+        <mrow>
+          <mn>3</mn>
+        </mrow>
+        <mrow>
+          <mn>2</mn>
+        </mrow>
+      </mfrac>
+    </math>
+    donc:
+  </p>
 </div>
 
 <div>
@@ -102,34 +193,64 @@ ${this.inlineStyle}
         | f |    \\       /  |
   -->
   <math>
-    <mtable frame="solid">
+    <mtable>
       <mtr>
-        <mtd><mi>
-          <math><mi>x</mi></math>
-        </mi></mtd>
-        <mtd><mi>-∞</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>
-          <math><mfrac><mrow>3</mrow><mrow>2</mrow></mfrac></math>
-        </mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+∞</mi></mtd>
+        <mtd>
+          <mi>
+            <mi>x</mi>
+          </mi>
+        </mtd>
+        <mtd>
+          <mo>-</mo>
+          <mi>∞</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mfrac>
+            <mrow>
+              <mn>2</mn>
+            </mrow>
+            <mrow>
+              <mn>3</mn>
+            </mrow>
+          </mfrac>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+          <mi>∞</mi>
+        </mtd>
       </mtr>
       <mtr>
-        <mtd><mi>f</mi><mn>'</mn></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>-</mi></mtd>
-        <mtd><mi>0</mi></mtd>
-        <mtd><mi>+</mi></mtd>
-        <mtd><mi></mi></mtd>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>-</mo>
+        </mtd>
+        <mtd>
+          <mi>0</mi>
+        </mtd>
+        <mtd>
+          <mo>+</mo>
+        </mtd>
+        <mtd></mtd>
       </mtr>
       <mtr>
-        <mtd><mi>f</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>\\</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>/</mi></mtd>
-        <mtd><mi></mi></mtd>
+        <mtd>
+          <mi>f</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>\\</mo>
+        </mtd>
+        <mtd></mtd>
+        <mtd>/</mtd>
+        <mtd></mtd>
       </mtr>
     </mtable>
   </math>
@@ -140,31 +261,104 @@ ${this.inlineStyle}
         title: "3ème fonction",
         content: `
 <div>
-  <p>Étudier les variations de <math>
-    <mi>f</mi>(<mi>x</mi>) = <msup><mi>x</mi><mn>3</mn></msup> - 3<msup><mi>x</mi><mn>2</mn></msup> + 2<mi>x</mi> - 3
-  </math> sur <b>R</b>.</p>
-  <p><math>
-    <mi>f</mi><mn>'</mn>(<mi>x</mi>) = 3<msup><mi>x</mi><mn>2</mn></msup> - 6<mi>x</mi> + 2
-  </math> et <math>
-    Δ = 36 - 24 = 12
-  </math></p>
-  <p>Il y a 2 racines <math>
-    <msub><mi>x</mi><mn>1</mn></msub>
-  </math> et <math>
-    <msub><mi>x</mi><mn>2</mn></msub>
-  </math>.</p>
   <p>
+    Étudier les variations de
+    <math>
+      <mi>f</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
+      <msup>
+        <mi>x</mi>
+        <mn>3</mn>
+      </msup>
+      <mo>-</mo>
+      <mn>3</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>+</mo>
+      <mn>2</mn>
+      <mi>x</mi>
+      <mo>-</mo>
+      <mn>3</mn>
+    </math>
+    sur <b>R</b>.
+  </p>
+  <p>
+    <math>
+      <msub>
+        <mi>f</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
+      <mn>3</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+      <mo>-</mo>
+      <mn>6</mn>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mn>2</mn>
+    </math>
+    et
+    <math>
+      <mi>Δ</mi>
+      <mo>=</mo>
+      <mn>36</mn>
+      <mo>-</mo>
+      <mn>24</mn>
+      <mo>=</mo>
+      <mn>12</mn>
+    </math>
+  </p>
+  <p>Il y a 2 racines:
     <math>
       <msub>
         <mi>x</mi>
         <mn>1</mn>
       </msub>
-      =
+  </math>
+  et
+  <math>
+    <msub>
+      <mi>x</mi>
+      <mn>2</mn>
+    </msub>
+  </math>
+  .
+  </p>
+  <p>
+    <math>
+      <msub>
+        <mi>x</mi>
+        <mi>1</mi>
+      </msub>
+      <mo>=</mo>
       <mfrac>
-        <mrow>(6 + <msqrt>2</msqrt>)</mrow>
-        <mrow>6</mrow>
+        <mrow>
+          <mo>(</mo>
+          <mn>6</mn>
+          <mo>+</mo>
+          <mn>2</mn>
+          <msqrt>
+            <mn>3</mn>
+          </msqrt>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <mn>6</mn>
+        </mrow>
       </mfrac>
-      = 1.6
+      <mo>≈</mo>
+      <mn>1.6</mn>
     </math>
     et
     <math>
@@ -172,12 +366,24 @@ ${this.inlineStyle}
         <mi>x</mi>
         <mn>2</mn>
       </msub>
-      =
+      <mo>=</mo>
       <mfrac>
-        <mrow>(6 - 2<msqrt>3</msqrt>)</mrow>
-        <mrow>6</mrow>
+        <mrow>
+          <mo>(</mo>
+          <mn>6</mn>
+          <mo>-</mo>
+          <mn>2</mn>
+          <msqrt>
+            <mn>3</mn>
+          </msqrt>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <mn>6</mn>
+        </mrow>
       </mfrac>
-      = 0.4
+      <mo>≈</mo>
+      <mn>0.4</mn>
     </math>
   </p>
 
@@ -187,36 +393,70 @@ ${this.inlineStyle}
         | f |    /     \\    /     |
   -->
   <math>
-    <mtable frame="solid">
+    <mtable>
       <mtr>
-        <mtd><mi>
-          <math><mi>x</mi></math>
-        </mi></mtd>
-        <mtd><mi>-∞</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>x2</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>x3</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+∞</mi></mtd>
+        <mtd>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mo>-</mo>
+          <mn>∞</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>x</mo>
+          <mn>2</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>x</mo>
+          <mn>3</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+          <mn>∞</mn>
+        </mtd>
       </mtr>
       <mtr>
-        <mtd><mi>f</mi><mn>'</mn></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+</mi></mtd>
-        <mtd><mi>0</mi></mtd>
-        <mtd><mi>-</mi></mtd>
-        <mtd><mi>0</mi></mtd>
-        <mtd><mi>+</mi></mtd>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mn>1</mn>
+          </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>-</mo>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>+</mo>
+        </mtd>
       </mtr>
       <mtr>
-        <mtd><mi>f</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>/</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>\\</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>/</mi></mtd>
+        <mtd>
+          <mi>f</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>/</mo>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>\\</mo>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mi>/</mi>
+        </mtd>
       </mtr>
     </mtable>
   </math>
@@ -231,48 +471,125 @@ ${this.inlineStyle}
   <p>
     Étudier les variations de
     <math>
-      <mi>f</mi>(<mi>x</mi>) =
+      <mi>f</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
       <mfrac>
-        <mrow>3<mi>x</mi> - 1</mrow>
-        <mrow>-2<mi>x</mi> + 5</mrow>
+        <mrow>
+          <mn>3</mn>
+          <mi>x</mi>
+          <mo>-</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mo>-</mo>
+          <mn>2</mn>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mn>5</mn>
+        </mrow>
       </mfrac>
     </math>
     sur
     <math>
-      ]-∞ ;
+      <mo>]</mo>
+      <mo>-</mo>
+      <mn>∞</mn>
+      <mo>;</mo>
       <mfrac>
-        <mrow>5</mrow>
-        <mrow>2</mrow>
+        <mrow>
+          <mn>5</mn>
+        </mrow>
+        <mrow>
+          <mn>2</mn>
+        </mrow>
       </mfrac>
-      [ U ]
+      <mo>[</mo>
+      <mi>U</mi>
+      <mo>]</mo>
       <mfrac>
-        <mrow>5</mrow>
-        <mrow>2</mrow>
+        <mrow>
+          <mn>5</mn>
+        </mrow>
+        <mrow>
+          <mn>2</mn>
+        </mrow>
       </mfrac>
-      ; +∞ 
-    </math>.
+      <mo>;</mo>
+      <mo>+</mo>
+      <mn>∞ </mn>
+    </math>
+    .
   </p>
   <p>
     <math>
-      <mi>f</mi><mn>'</mn>(<mi>x</mi>) =
+      <msub>
+        <mi>f</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
       <mfrac>
-        <mrow>3 (-2<mi>x</mi> + 5) - (3<mi>x</mi> - 1) (-2)</mrow>
         <mrow>
+          <mn>3</mn>
+          <mo>(</mo>
+          <mo>-</mo>
+          <mn>2</mn>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mn>5</mn>
+          <mo>)</mo>
+          <mo>-</mo>
+          <mo>(</mo>
+          <mn>3</mn>
+          <mi>x</mi>
+          <mo>-</mo>
+          <mn>1</mn>
+          <mo>)</mo>
+          <mo>(</mo>
+          <mo>-</mo>
+          <mn>2</mn>
+          <mo>)</mo>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mo>-</mo>
+          <mn>2</mn>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mn>5</mn>
+          <mo>)</mo>
           <msup>
-            <mi>(-2<mi>x</mi> + 5)</mi><mn>2</mn>
+            <mi></mi>
+            <mn>2</mn>
           </msup>
         </mrow>
       </mfrac>
-      =
+      <mo>=</mo>
       <mfrac>
-        <mrow>13</mrow>
         <mrow>
+          <mn>13</mn>
+        </mrow>
+        <mrow>
+          <mo>(</mo>
+          <mo>-</mo>
+          <mn>2</mn>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mn>5</mn>
+          <mo>)</mo>
           <msup>
-            <mi>(-2<mi>x</mi> + 5)</mi><mn>2</mn>
+            <mi></mi>
+            <mn>2</mn>
           </msup>
         </mrow>
       </mfrac>
-      > 0
+      <mo>></mo>
+      <mn>0</mn>
     </math>
   </p>
 </div>
@@ -284,40 +601,62 @@ ${this.inlineStyle}
         | f |  /          /  |
   -->
   <math>
-    <mtable frame="solid">
+    <mtable>
       <mtr>
         <mtd>
-          <mi>
-            <math><mi>x</mi></math>
-          </mi>
+          <mi>x</mi>
         </mtd>
-        <mtd><mi>-∞</mi></mtd>
-        <mtd><mi></mi></mtd>
         <mtd>
-          <mi>
-            <math>
-              <mfrac><mrow>5</mrow><mrow>2</mrow></mfrac>
-            </math>
-          </mi>
+          <mo>-</mo>
+          <mi>∞</mi>
         </mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+∞</mi></mtd>
+        <mtd></mtd>
+        <mtd>
+          <mfrac>
+            <mrow>
+              <mn>5</mn>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+            </mrow>
+          </mfrac>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+          <mi>∞</mi>
+        </mtd>
       </mtr>
       <mtr>
-        <mtd><mi>f</mi><mn>'</mn></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+</mi></mtd>
-        <mtd><mi></mi></mtd>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+        </mtd>
+        <mtd></mtd>
       </mtr>
       <mtr>
-        <mtd><mi>f</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>/</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>/</mi></mtd>
-        <mtd><mi></mi></mtd>
+        <mtd>
+          <mi>f</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>/</mo>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>/</mo>
+        </mtd>
+        <mtd></mtd>
       </mtr>
     </mtable>
   </math>
@@ -330,72 +669,173 @@ ${this.inlineStyle}
 <div>
   <p>
     Étudier les variations de
-    <math><mi>f</mi>(<mi>x</mi>) = (2<mi>x</mi> + 1)</math>,
-    <math><mi>ln</mi>(<mi>x</mi>)</math> sur <b>R*+</b>
-    .
+    <math>
+      <mi>f</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
+      <mo>(</mo>
+      <mn>2</mn>
+      <mi>x</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+    </math>,
+    <math>
+      <mi>ln</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+    </math>
+    sur <b>R*+</b>.
   </p>
   <p>
     <math>
-      <mi>f</mi><mn>´</mn>(<mi>x</mi>) =
+      <msub>
+        <mi>f</mi>
+        <mn>1</mn>
+      </msub>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
       <mfrac>
-        <mrow>2<mi>ln</mi>(<mi>x</mi>) + (2<mi>x</mi> + 1)</mrow>
+        <mrow>
+          <mn>2</mn>
+          <mi>ln</mi>
+          <mo>(</mo>
+          <mi>x</mi>
+          <mo>)</mo>
+          <mo>+</mo>
+          <mo>(</mo>
+          <mn>2</mn>
+          <mi>x</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+          <mo>)</mo>
+        </mrow>
         <mrow>
           <mi>x</mi>
         </mrow>
       </mfrac>
     </math>
-  </p>
-  <p>
-    On la nomme
+    , on la nomme
     <math>
-      <mi>g</mi>(<mi>x</mi>) = 2<mi>ln</mi>(<mi>x</mi>) + 2 +
+      <mi>g</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>=</mo>
+      <mn>2</mn>
+      <mi>ln</mi>
+      <mo>(</mo>
+      <mi>x</mi>
+      <mo>)</mo>
+      <mo>+</mo>
+      <mn>2</mn>
+      <mo>+</mo>
       <mfrac>
-        <mrow>1</mrow>
-        <mrow><mi>x</mi></mrow>
+        <mrow>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mi>x</mi>
+        </mrow>
       </mfrac>
     </math>
     .
   </p>
   <p>
     <math>
-      <mi>g</mi><mn>´</mn>(<mi>x</mi>) =
+      <msub>
+        <mi>g</mi>
+        <mn>1</mn>
+        <mo>(</mo>
+        <mi>x</mi>
+        <mo>)</mo>
+      </msub>
+      <mo>=</mo>
       <mfrac>
-        <mrow>2</mrow>
-        <mrow>x</mrow>
-      </mfrac>
-      -
-      <mfrac>
-        <mrow>1</mrow>
         <mrow>
-          <msup><mi>x</mi><mn>2</mn></msup>
+          <mn>2</mn>
+        </mrow>
+        <mrow>
+          <mi>x</mi>
         </mrow>
       </mfrac>
-      =
+      <mo>-</mo>
       <mfrac>
-        <mrow>2<mi>x</mi> - 1</mrow>
         <mrow>
-          <msup><mi>x</mi><mn>2</mn></msup>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
         </mrow>
       </mfrac>
-      > 0
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mn>2</mn>
+          <mi>x</mi>
+          <mo>-</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <msup>
+            <mi>x</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+      </mfrac>
+      <mo>></mo>
+      <mn>0</mn>
     </math>
     si
     <math>
       <mi>x</mi>
+      <mo>></mo>
       <mfrac>
-        <mrow>1</mrow>
-        <mrow>2</mrow>
+        <mrow>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mn>2</mn>
+        </mrow>
       </mfrac>
     </math>
-  </p>
-  <p>
+    ,
     <math>
-      <mi>g</mi>(
+      <mi>g</mi>
+      <mo>(</mo>
       <mfrac>
-        <mrow>1</mrow>
-        <mrow>2</mrow>
+        <mrow>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mn>2</mn>
+        </mrow>
       </mfrac>
-      ) = <mi>ln</mi>(0.5) + 4 = 3.3
+      <mo>)</mo>
+      <mo>=</mo>
+      <mi>ln</mi>
+      <mo>(</mo>
+      <mfrac>
+        <mrow>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mn>2</mn>
+        </mrow>
+      </mfrac>
+      <mo>)</mo>
+      <mo>+</mo>
+      <mn>4</mn>
+      <mo>=</mo>
+      <mn>3.3</mn>
     </math>
   </p>
 </div>
@@ -407,40 +847,64 @@ ${this.inlineStyle}
         | g |  \          /  |
   -->
   <math>
-    <mtable frame="solid">
+    <mtable >
       <mtr>
         <mtd>
-          <mi>
-            <math><mi>x</mi></math>
-          </mi>
+          <mi>x</mi>
         </mtd>
-        <mtd><mi>-∞</mi></mtd>
-        <mtd><mi></mi></mtd>
         <mtd>
-          <mi>
-            <math>
-              <mfrac><mrow>1</mrow><mrow>2</mrow></mfrac>
-            </math>
-          </mi>
+          <mo>-</mo>
+          <mi>∞</mi>
         </mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+∞</mi></mtd>
+        <mtd></mtd>
+        <mtd>
+          <mfrac>
+            <mrow>
+              <mn>1</mn>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+            </mrow>
+          </mfrac>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+          <mi>∞</mi>
+        </mtd>
       </mtr>
       <mtr>
-        <mtd><mi>g</mi><mn>'</mn></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>-</mi></mtd>
-        <mtd><mi>0</mi></mtd>
-        <mtd><mi>+</mi></mtd>
-        <mtd><mi></mi></mtd>
+        <mtd>
+          <msub>
+            <mi>g</mi>
+            <mn>1</mn>
+          </msub>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>-</mo>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd>
+          <mo>+</mo>
+        </mtd>
+        <mtd></mtd>
       </mtr>
       <mtr>
-        <mtd><mi>g</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>\</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>/</mi></mtd>
-        <mtd><mi></mi></mtd>
+        <mtd>
+          <mi>g</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>\\</mo>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>/</mo>
+        </mtd>
+        <mtd></mtd>
       </mtr>
     </mtable>
   </math>
@@ -454,28 +918,42 @@ ${this.inlineStyle}
         | f |    /    |  
   -->
   <math>
-    <mtable frame="solid">
+    <mtable>
       <mtr>
         <mtd>
-          <mi>
-            <math><mi>x</mi></math>
-          </mi>
+          <mi>x</mi>
         </mtd>
-        <mtd><mi>0</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+∞</mi></mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+          <mi>∞</mi>
+        </mtd>
       </mtr>
       <mtr>
-        <mtd><mi>f</mi><mn>'</mn></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>+</mi></mtd>
-        <mtd><mi></mi></mtd>
+        <mtd>
+          <msub>
+            <mi>f</mi>
+            <mn>1</mn>
+          </msub>   
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>+</mo>
+        </mtd>
+        <mtd></mtd>
       </mtr>
       <mtr>
-        <mtd><mi>f</mi></mtd>
-        <mtd><mi></mi></mtd>
-        <mtd><mi>/</mi></mtd>
-        <mtd><mi></mi></mtd>
+        <mtd>
+          <mi>f</mi>
+        </mtd>
+        <mtd></mtd>
+        <mtd>
+          <mo>/</mo>
+        </mtd>
+        <mtd></mtd>
       </mtr>
     </mtable>
   </math>
@@ -504,10 +982,6 @@ ${this.inlineStyle}
       width: 50%;
       padding: 1rem;
       box-sizing: border-box;
-    }
-
-    math {
-      display: inline;
     }
   
     table,
