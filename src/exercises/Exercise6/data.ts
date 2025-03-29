@@ -190,9 +190,14 @@ const EXERCISE_6: ExerciseData = {
 
     On trouve 
       <math class="maths-bg">
-        <mo>|</mo>
-        <mi>z</mi>
-        <mo lspace="0" rspace="0">|</mo>
+        <msup>
+          <mrow>
+            <mo lspace="0" rspace="0">|</mo>
+            <mi>z</mi>
+            <mo lspace="0" rspace="0">|</mo>
+          </mrow>
+          <mn>2</mn>
+        </msup>
 
         <mo>=</mo>
 
