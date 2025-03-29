@@ -296,16 +296,9 @@ const EXERCISE_5: ExerciseData = {
 
         <mspace width="5px"/>
 
-        <mo>(</mo>
-          <mo>(</mo>
-            <mi>i</mi>      
-          <mo>)</mo>
-
-          <mspace width="5px"/>
-          
-          <mo>(</mo>
-            <mn>-2</mn>
-          <mo>)</mo>
+        <mo>(</mo>          
+          <mn>-2</mn>
+          <mi>i</mi>      
         <mo>)</mo>
 
         <mo>=</mo>
@@ -387,8 +380,8 @@ const EXERCISE_5: ExerciseData = {
             <mn>2</mn>
             <msqrt>
               <mn>3</mn>
-              <mi>i</mi>
             </msqrt>
+            <mi>i</mi>
           </math>
         </li>
 
@@ -402,8 +395,8 @@ const EXERCISE_5: ExerciseData = {
             <mn>2</mn>
             <msqrt>
               <mn>3</mn>
-              <mi>i</mi>
             </msqrt>
+            <mi>i</mi>
           </math>
         </li>
       </ul>
@@ -449,8 +442,8 @@ const EXERCISE_5: ExerciseData = {
           <mo>+</mo>
           <msqrt>
             <mn>3</mn>
-            <mi>i</mi>
           </msqrt>
+          <mi>i</mi>
         </math>
       </p>
     </li>
