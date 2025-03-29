@@ -98,10 +98,8 @@ const EXERCISE_6: ExerciseData = {
 
         <mo>=</mo>
 
-        <msub>
-          <mi>R</mi>
-          <mi>z</mi>
-        </msub>
+        <mi>R</mi>
+        <mi>z</mi>
       </math>
     (partie réelle de 
       <math>
@@ -114,10 +112,8 @@ const EXERCISE_6: ExerciseData = {
         <mo>=</mo>
 
         <mi>l</mi>
-        <msub>
-          <mi>m</mi>
-          <mi>z</mi>
-        </msub>
+        <mi>m</mi>
+        <mi>z</mi>
       </math>
     (partie imaginaire de 
       <math>
@@ -219,16 +215,10 @@ const EXERCISE_6: ExerciseData = {
       </math>
     noté
       <math>
-        <msub>
-          <mrow>
-            <mi>a</mi>
-            <mi>r</mi>
-            <mi>g</mi>
-          </mrow>
-          <mrow>
-            <mi>z</mi>
-          </mrow>
-        </msub>
+        <mi>a</mi>
+        <mi>r</mi>
+        <mi>g</mi>
+        <mi>z</mi>
       </math>
     , l'angle orienté
       <math>
@@ -261,10 +251,8 @@ const EXERCISE_6: ExerciseData = {
         <mo>(</mo>
           <mi>a</mi>
           <mi>r</mi>
-          <msub>
-            <mi>g</mi>
-            <mi>z</mi>
-          </msub>
+          <mi>g</mi>
+          <mi>z</mi>
         <mo>)</mo>
 
         <mo>=</mo>
@@ -296,10 +284,8 @@ const EXERCISE_6: ExerciseData = {
         <mo>(</mo>
           <mi>a</mi>
           <mi>r</mi>
-          <msub>
-            <mi>g</mi>
-            <mi>z</mi>
-          </msub>
+          <mi>g</mi>
+          <mi>z</mi>
         <mo>)</mo>
 
         <mo>=</mo>
@@ -351,26 +337,24 @@ const EXERCISE_6: ExerciseData = {
           </msup>
         </msqrt>
 
-        <mo>x</mo>
+        <mspace width="10px" />
 
-        <mo>(</mo>
+        <mo>[</mo>
           <mi>c</mi>
           <mi>o</mi>
           <mi>s</mi>
           <mo>(</mo>
             <mi>a</mi>
             <mi>r</mi>
-            <msub>
-              <mi>g</mi>
-              <mi>z</mi>
-            </msub>
+            <mi>g</mi>
+            <mi>z</mi>
           <mo>)</mo>
 
           <mo>+</mo>
           
           <mi>i</mi>
 
-          <mo>x</mo>
+          <mo>.</mo>
 
           <mi>s</mi>
           <mi>i</mi>
@@ -378,12 +362,10 @@ const EXERCISE_6: ExerciseData = {
           <mo>(</mo>
             <mi>a</mi>
             <mi>r</mi>
-            <msub>
-              <mi>g</mi>
-              <mi>z</mi>
-            </msub>
+            <mi>g</mi>
+            <mi>z</mi>
           <mo>)</mo>
-        <mo>)</mo>
+        <mo>]</mo>
       </math>
     .
   </p>
@@ -413,19 +395,17 @@ const EXERCISE_6: ExerciseData = {
           </msup>
         </msqrt>
 
-        <mo>x</mo>
+        <mo>.</mo>
 
         <msup>
           <mi>e</mi>
           <mrow>
             <mi>i</mi>
-            <mo>x</mo>
+            <mo>.</mo>
             <mi>a</mi>
             <mi>r</mi>
-            <msub>
-              <mi>g</mi>
-              <mi>z</mi>
-            </msub>
+            <mi>g</mi>
+            <mi>z</mi>
           </mrow>
         </msup>
       </math>
@@ -461,10 +441,8 @@ const EXERCISE_6: ExerciseData = {
       <math>
         <mi>a</mi>
         <mi>r</mi>
-        <msub>
-          <mi>g</mi>
-          <mi>z</mi>
-        </msub>
+        <mi>g</mi>
+        <mi>z</mi>
 
         <mo>=</mo>
 
@@ -482,7 +460,7 @@ const EXERCISE_6: ExerciseData = {
 
           <mo>=</mo>
 
-          <mo>|</mo>
+          <mo lspace="0" rspace="0">|</mo>
           <mi>z</mi>
           <mo lspace="0" rspace="0">|</mo>
           
@@ -550,7 +528,7 @@ const EXERCISE_6: ExerciseData = {
 
             <mi>i</mi>
 
-            <mo>x</mo>
+            <mo>.</mo>
 
             <mi>s</mi>
             <mi>i</mi>
@@ -567,7 +545,7 @@ const EXERCISE_6: ExerciseData = {
         
           <mn>&#x3C1;</mn>
 
-          <mo>x</mo>
+          <mo>.</mo>
 
           <mi>e</mi>          
         </math>
