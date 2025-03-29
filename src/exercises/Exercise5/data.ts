@@ -1,7 +1,7 @@
 import { ExerciseData } from "../type";
 
 const EXERCISE_5: ExerciseData = {
-  title: "Exercises",
+  title: "Exercices",
   className: "exercise-5",
   inlineStyle: (): string => {
     return `
